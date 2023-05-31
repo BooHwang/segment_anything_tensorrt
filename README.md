@@ -4,7 +4,7 @@ Use tensorrt accerate segment anything model ([SAM](https://github.com/facebookr
 
 
 
-# Installation
+## Installation
 
 The code requires `python>=3.8`, as well as `pytorch>=1.7` and `torchvision>=0.8`. Installing both PyTorch and TorchVision with CUDA support is strongly recommended.
 
@@ -23,9 +23,9 @@ After clone the code, you should download sam model from ([SAM](https://github.c
 
 
 
-# Model Transform
+## Model Transform
 
-## Image embedding transform
+### Image embedding transform
 
 - Transform image embedding pth from sam to onnx model
 
@@ -51,7 +51,7 @@ python scripts/onnx2trt.py --img_onnx2trt --img_onnx_model_path embedding_onnx/s
 
 
 
-## SAM model transform
+### SAM model transform
 
 **Notice:** opset set difference will get error while transfer onnx model to tensorrt engine, and it can set to 16 or 17 while my docker images is "nvidia/cuda:11.4.2-cudnn8-devel-ubuntu18.04"
 
@@ -94,7 +94,7 @@ python scripts/onnx2trt.py --sam_onnx2trt --sam_onnx_path ./weights/sam_vit_h_4b
 
 
 
-# Inference
+## Inference
 
 - Use **ONNX** model inference
 
