@@ -311,7 +311,7 @@ def export_engine_prompt_encoder_and_mask_decoder(f='sam_onnx_example.onnx', hal
     profile.set_shape('point_labels', (1, 2), (1, 5), (1,10))
     profile.set_shape('mask_input', (1, 1, 256, 256), (1, 1, 256, 256), (1, 1, 256, 256))
     profile.set_shape('has_mask_input', (1,), (1, ), (1, ))
-    profile.set_shape_input('orig_im_size', (1200, 1800), (1200, 1800), (1200, 1800)) # Must be consistent with input
+    # profile.set_shape_input('orig_im_size', (1200, 1800), (1200, 1800), (1200, 1800)) # Must be consistent with input
     config.add_optimization_profile(profile)
 
     print(f'building FP{16 if builder.platform_has_fast_fp16 and half else 32} engine as {f}')

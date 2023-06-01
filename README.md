@@ -105,7 +105,7 @@ def forward(
 
     # return upscaled_masks, scores, masks
 
-# Download weights of sam_vit_h_4b8939.pth, and change line 136 to "orig_im_size": torch.tensor([1500, 2250], dtype=torch.int32)
+# Download weights of sam_vit_h_4b8939.pth
 python scripts/onnx2trt.py --prompt_masks_pt2onnx
 ```
 
