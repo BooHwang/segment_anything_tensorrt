@@ -8,4 +8,4 @@
 @Desc      : None
 '''
 
-from .sam_function import pre_processing, apply_coords, show_mask, show_points, show_box
+from .sam_function import pre_processing, apply_coords, show_mask, show_points, show_box, mask_postprocessing
